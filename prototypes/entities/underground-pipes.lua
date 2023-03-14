@@ -175,10 +175,11 @@ local pipes = {}
 for name, properties in pairs(names_table) do
     for level, color in pairs(levels_table) do
         local current_pipe = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
-        if level == 1 then
-            current_pipe.name = name .. "-pipe"
-            current_pipe.minable.result = name .. "-pipe"
-        elseif level == "space" then
+        -- if level == 1 then
+        --     current_pipe.name = name .. "-pipe"
+        --     current_pipe.minable.result = name .. "-pipe"
+        -- else
+        if level == "space" then
             current_pipe.name = name .. "-space-pipe"
             current_pipe.minable.result = name .. "-space-pipe"
         else

@@ -16,6 +16,17 @@ afh_ground_only =
   "layer-14"
 }
 
+
+levelsTable = {
+  ["1"] = 1,
+  ["2"] = 2,
+  ["3"] = 3
+}
+
+if mods["space-exploration"] then
+  levelsTable["space"] = 4
+end
+
 require("prototypes.entities.pipecovers")
 require("prototypes.entities.underground-pipes")
 require("prototypes.entities.underground-buildings")

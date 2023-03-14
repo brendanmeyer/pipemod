@@ -10,12 +10,12 @@ data:extend(
                 -- ONE TO ONE PIPES
                 {
                     type = 'unlock-recipe',
-                    recipe = 'one-to-one-forward-pipe'
+                    recipe = 'one-to-one-forward-t1-pipe'
                 },
                 -- ONE TO TWO PIPES
                 {
                     type = 'unlock-recipe',
-                    recipe = 'one-to-two-perpendicular-pipe'
+                    recipe = 'one-to-two-perpendicular-t1-pipe'
                 },
                  --
                 --[[{
@@ -24,32 +24,32 @@ data:extend(
       },]] -- ONE TO THREE PIPES
                 {
                     type = 'unlock-recipe',
-                    recipe = 'one-to-three-forward-pipe'
+                    recipe = 'one-to-three-forward-t1-pipe'
                 },
                 -- ONE TO FOUR PIPE
                 {
                     type = 'unlock-recipe',
-                    recipe = 'one-to-four-pipe'
+                    recipe = 'one-to-four-t1-pipe'
                 },
                 -- UNDERGROUND I PIPES
                 {
                     type = 'unlock-recipe',
-                    recipe = 'underground-i-pipe'
+                    recipe = 'underground-i-t1-pipe'
                 },
                 -- UNDERGROUND L PIPES
                 {
                     type = 'unlock-recipe',
-                    recipe = 'underground-L-pipe'
+                    recipe = 'underground-L-t1-pipe'
                 },
                 -- UNDERGROUND T PIPES
                 {
                     type = 'unlock-recipe',
-                    recipe = 'underground-t-pipe'
+                    recipe = 'underground-t-t1-pipe'
                 },
                 -- UNDERGROUND CROSS PIPES
                 {
                     type = 'unlock-recipe',
-                    recipe = 'underground-cross-pipe'
+                    recipe = 'underground-cross-t1-pipe'
                 },
                 -- UNDERGROUND BUILDINGS
                 {

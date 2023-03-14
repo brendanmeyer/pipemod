@@ -102,16 +102,6 @@ local namesTable = {
   }
 }
 
-local levelsTable = {
-  ["1"] = 1,
-  ["2"] = 2,
-  ["3"] = 3
-}
-
-if mods["space-exploration"] then
-  levelsTable["space"] = 4
-end
-
 local file_path = "__underground-pipe-pack__/graphics/entity/level-"
 local function build_picture_table(type, variant, level)
   if variant == "-perpendicular-secondary-" then
@@ -186,11 +176,12 @@ for types, sets in pairs(namesTable) do
     for variants, directions in pairs(datas.variant) do
       for levelsS , levelsN in pairs(levelsTable) do
         local currentPipe = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
-        if levelsS == "1" then
-          currentPipe.name = types .. variants ..  "pipe"
-          currentPipe.minable.result = types .. datas.mine_and_place .. "-pipe"
-          currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-pipe", count = 1}
-        elseif levelsS == "space" then
+        -- if levelsS == "1" then
+        --   currentPipe.name = types .. variants ..  "pipe"
+        --   currentPipe.minable.result = types .. datas.mine_and_place .. "-pipe"
+        --   currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-pipe", count = 1}
+        -- else
+        if levelsS == "space" then
           currentPipe.name = types .. variants ..  "space-pipe"
           currentPipe.minable.result = types .. datas.mine_and_place .. "-space-pipe"
           currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-space-pipe", count = 1}
