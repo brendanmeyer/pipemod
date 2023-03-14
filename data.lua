@@ -18,9 +18,9 @@ afh_ground_only =
 
 
 levelsTable = {
-  ["1"] = 1,
-  ["2"] = 2,
-  ["3"] = 3
+  ["t1"] = 1,
+  ["t2"] = 2,
+  ["t3"] = 3
 }
 
 if mods["space-exploration"] then
@@ -42,6 +42,7 @@ require("prototypes.items.items-intermediary")
 require("prototypes.recipes.recipes-t1")
 require("prototypes.recipes.recipes-t2")
 require("prototypes.recipes.recipes-t3")
+require("prototypes.recipes.recipes-pipes")
 require("prototypes.recipes.recipes-valves")
 require("prototypes.recipes.recipes-intermediary")
 require("prototypes.technology")

@@ -176,26 +176,16 @@ for types, sets in pairs(namesTable) do
     for variants, directions in pairs(datas.variant) do
       for levelsS , levelsN in pairs(levelsTable) do
         local currentPipe = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
-        -- if levelsS == "1" then
-        --   currentPipe.name = types .. variants ..  "pipe"
-        --   currentPipe.minable.result = types .. datas.mine_and_place .. "-pipe"
-        --   currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-pipe", count = 1}
-        -- else
-        if levelsS == "space" then
-          currentPipe.name = types .. variants ..  "space-pipe"
-          currentPipe.minable.result = types .. datas.mine_and_place .. "-space-pipe"
-          currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-space-pipe", count = 1}
-        else
-          currentPipe.name = types .. variants .. "t" .. levelsS .. "-pipe"
-          currentPipe.minable.result = types .. datas.mine_and_place .. "-t" .. levelsS .. "-pipe"
-          currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-t" .. levelsS .. "-pipe", count = 1}
-        end
+
+        currentPipe.name = types .. variants .. levelsS .. "-pipe"
+        currentPipe.minable.result = types .. datas.mine_and_place .. "-" .. levelsS .. "-pipe"
+        currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-" .. levelsS .. "-pipe", count = 1}
 
         if levelsS == "space" then
           currentPipe.icon = "__underground-pipe-pack__/graphics/icons/space-exploration-compat/" .. datas.icon .. ".png"
           currentPipe.se_allow_in_space = true
         else
-          currentPipe.icon = "__underground-pipe-pack__/graphics/icons/" .. datas.icon .. "-t" .. levelsS .. ".png"
+          currentPipe.icon = "__underground-pipe-pack__/graphics/icons/" .. datas.icon .. "-" .. levelsS .. ".png"
           currentPipe.se_allow_in_space = false
         end
 
