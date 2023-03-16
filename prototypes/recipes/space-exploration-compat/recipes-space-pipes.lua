@@ -21,7 +21,7 @@ data:extend({
     name = 'space-pipe-coupler',
     ingredients =
     {
-      {'small-pipe-coupler', 1},
+      {'pipe-coupler-t1', 1},
       {"copper-cable", 2 },
       {"se-heavy-girder", 1},
       {"plastic-bar", 1 },

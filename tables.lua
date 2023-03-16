@@ -519,6 +519,6 @@ data.adjustable_valve_table = {
 }
 
 data.ignore = {
-    ['4-to-4-pipe'] = '4-to-4-pipe'
+    ['4-to-4-t1-pipe'] = '4-to-4-t1-pipe'
 }
 return data
