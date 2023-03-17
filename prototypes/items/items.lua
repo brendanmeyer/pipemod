@@ -49,6 +49,6 @@ function pipe_item(pipe_level)
     })
 end
 
-for levelsS, levelsN in pairs(levelsTable) do
+for levelsS, _ in pairs(levelsTable) do
     pipe_item(levelsS)
 end

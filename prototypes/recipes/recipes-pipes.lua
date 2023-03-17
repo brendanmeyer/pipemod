@@ -24,7 +24,6 @@ function pipe_recipe_helper(pipe_level, name, ingredient_pipe, ingredient_pipe_c
 end
 
 function pipe_recipe(pipe_level, ingredient_pipe, previous_level)
-    -- pipe_level = "-"..pipe_level 
     if isempty(ingredient_pipe) then ingredient_pipe = "pipe" .. pipe_level end
     data:extend({ 
         -- ONE TO ONE PIPES
@@ -55,6 +54,3 @@ function pipe_recipe(pipe_level, ingredient_pipe, previous_level)
     })
 end
 
-pipe_recipe("t1", "pipe")
-pipe_recipe("t2", "pipe", "t1")
-pipe_recipe("t3", "pipe", "t2")

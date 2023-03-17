@@ -174,20 +174,21 @@ local pipes ={}
 for types, sets in pairs(namesTable) do
   for _ , datas in pairs(sets) do
     for variants, directions in pairs(datas.variant) do
-      for levelsS , levelsN in pairs(levelsTable) do
+      for levelsS , levelsD in pairs(levelsTable) do
+        levelsN = levelsD[1]
         local currentPipe = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
 
         currentPipe.name = types .. variants .. levelsS .. "-pipe"
         currentPipe.minable.result = types .. datas.mine_and_place .. "-" .. levelsS .. "-pipe"
         currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-" .. levelsS .. "-pipe", count = 1}
 
-        if levelsS == "space" then
-          currentPipe.icon = "__underground-pipe-pack__/graphics/icons/space-exploration-compat/" .. datas.icon .. ".png"
-          currentPipe.se_allow_in_space = true
-        else
+        -- if levelsS == "space" then
+        --   currentPipe.icon = "__underground-pipe-pack__/graphics/icons/space-exploration-compat/" .. datas.icon .. ".png"
+        --   currentPipe.se_allow_in_space = true
+        -- else
           currentPipe.icon = "__underground-pipe-pack__/graphics/icons/level-" .. levelsS .. "/" .. datas.icon .. ".png"
           currentPipe.se_allow_in_space = false
-        end
+        -- end
 
         currentPipe.icon_size = 32
         local fluidBox = util.table.deepcopy(currentPipe.fluid_box)

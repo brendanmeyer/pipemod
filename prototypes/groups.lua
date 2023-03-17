@@ -93,6 +93,6 @@ local space_groups =
   },
 }
 
-if mods["space-exploration"] then
+-- if mods["space-exploration"] then
   data:extend(space_groups)
-end
+-- end
