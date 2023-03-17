@@ -43,7 +43,7 @@ end
 local namesTable = {
   ["one-to-one"] = {
     {
-      icon = "one-to-one",
+      icon = "one-to-one-forward",
       mine_and_place = "-forward",
       variant = {
       ["-forward-"] = "S",
@@ -55,7 +55,7 @@ local namesTable = {
   },
   ["one-to-two"] = {
     {
-      icon = "one-to-two-parallel",
+      icon = "one-to-two-perpendicular",
       mine_and_place = "-perpendicular",
       variant = {
       ["-perpendicular-"] = "EW",
@@ -93,10 +93,10 @@ local namesTable = {
   },
   ["one-to-four"] = {
     {
-      icon = "one-to-four",
+      icon = "one-to-four-forward",
       mine_and_place = "",
       variant = {
-        ["-"] = "NSEW"
+        ["-forward-"] = "NSEW"
       }
     }
   }
@@ -185,7 +185,7 @@ for types, sets in pairs(namesTable) do
           currentPipe.icon = "__underground-pipe-pack__/graphics/icons/space-exploration-compat/" .. datas.icon .. ".png"
           currentPipe.se_allow_in_space = true
         else
-          currentPipe.icon = "__underground-pipe-pack__/graphics/icons/" .. datas.icon .. "-" .. levelsS .. ".png"
+          currentPipe.icon = "__underground-pipe-pack__/graphics/icons/level-" .. levelsS .. "/" .. datas.icon .. ".png"
           currentPipe.se_allow_in_space = false
         end
 

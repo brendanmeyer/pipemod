@@ -1,7 +1,7 @@
 
 function pipe_item_helper(pipe_level, name, subgroup, order, stack_size, ispipe)
     pipestr = ""
-    if ispipe then pipestr = "-pipe" end
+    if ispipe == nil or ispipe then pipestr = "-pipe" end
 
     return {
         type = "item",
