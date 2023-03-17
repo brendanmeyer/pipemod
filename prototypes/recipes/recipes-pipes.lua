@@ -1,22 +1,42 @@
 local function isempty(s) return s == nil or s == '' end
 
-function pipe_recipe(pipe_level, ingredient_pipe)
+function pipe_recipe_helper1(pipe_level, name, ingredient_pipe, ingredient_pipe_count, sj_count, pc_count, ups_count, ispipe)
+    pipestr = ""
+    if ispipe == nil or ispipe then pipestr = "-pipe" end
+
+    recipe = {
+        type = "recipe",
+        name = name.."-"..pipe_level..pipestr,
+        ingredients = {
+            {ingredient_pipe, ingredient_pipe_count},
+            {"swivel-joint-"..pipe_level, sj_count},
+            {"pipe-coupler-"..pipe_level, pc_count},
+            {"underground-pipe-segment-"..pipe_level, ups_count}
+        },
+        enabled = false,
+        result = name.."-"..pipe_level..pipestr
+    }
+    return recipe
+end
+
+function pipe_recipe(pipe_level, ingredient_pipe, previous_level)
     -- pipe_level = "-"..pipe_level 
     if isempty(ingredient_pipe) then ingredient_pipe = "pipe" .. pipe_level end
     data:extend({ 
         -- ONE TO ONE PIPES
-        {
-            type = "recipe",
-            name = "one-to-one-forward-" .. pipe_level .. "-pipe",
-            ingredients = {
-                {ingredient_pipe, 1},
-                {"swivel-joint" .. pipe_level, 1},
-                {"pipe-coupler" .. pipe_level, 1},
-                {"underground-pipe-segment-" .. pipe_level, 5}
-            },
-            enabled = false,
-            result = "one-to-one-forward-" .. pipe_level .. "-pipe"
-        }, 
+        pipe_recipe_helper1(pipe_level, "one-to-one-forward", ingredient_pipe, 1, 1, 1, 5),
+        -- {
+        --     type = "recipe",
+        --     name = "one-to-one-forward-" .. pipe_level .. "-pipe",
+        --     ingredients = {
+        --         {ingredient_pipe, 1},
+        --         {"swivel-joint" .. pipe_level, 1},
+        --         {"pipe-coupler" .. pipe_level, 1},
+        --         {"underground-pipe-segment-" .. pipe_level, 5}
+        --     },
+        --     enabled = false,
+        --     result = "one-to-one-forward-" .. pipe_level .. "-pipe"
+        -- }, 
         --[[{
             type = "recipe",
             name = "one-to-two-L-FL-pipe",
@@ -36,8 +56,8 @@ function pipe_recipe(pipe_level, ingredient_pipe)
             name = "one-to-two-perpendicular-" .. pipe_level .. "-pipe",
             ingredients = {
                 {ingredient_pipe, 1},
-                {"swivel-joint" .. pipe_level, 1},
-                {"pipe-coupler" .. pipe_level, 2},
+                {"swivel-joint-" .. pipe_level, 1},
+                {"pipe-coupler-" .. pipe_level, 2},
                 {"underground-pipe-segment-" .. pipe_level, 10}
             },
             enabled = false,
@@ -49,8 +69,8 @@ function pipe_recipe(pipe_level, ingredient_pipe)
             name = "one-to-three-forward-" .. pipe_level .. "-pipe",
             ingredients = {
                 {ingredient_pipe, 1},
-                {"swivel-joint" .. pipe_level, 1},
-                {"pipe-coupler" .. pipe_level, 3},
+                {"swivel-joint-" .. pipe_level, 1},
+                {"pipe-coupler-" .. pipe_level, 3},
                 {"underground-pipe-segment-" .. pipe_level, 15}
             },
             enabled = false,
@@ -62,7 +82,7 @@ function pipe_recipe(pipe_level, ingredient_pipe)
             name = "one-to-four-forward-" .. pipe_level .. "-pipe",
             ingredients = {
                 {ingredient_pipe, 1},
-                {"pipe-coupler" .. pipe_level, 4},
+                {"pipe-coupler-" .. pipe_level, 4},
                 {"underground-pipe-segment-" .. pipe_level, 20}
             },
             enabled = false,
@@ -75,7 +95,7 @@ function pipe_recipe(pipe_level, ingredient_pipe)
             ingredients =
             {
                 {ingredient_pipe, 1},
-                {"pipe-coupler" .. pipe_level, 4},
+                {"pipe-coupler-" .. pipe_level, 4},
                 {"underground-pipe-segment-" .. pipe_level, 20},
             },
             enabled = false,
@@ -87,7 +107,7 @@ function pipe_recipe(pipe_level, ingredient_pipe)
             type = "recipe",
             name = "underground-i-" .. pipe_level .. "-pipe",
             ingredients = {
-                {"pipe-coupler" .. pipe_level, 2},
+                {"pipe-coupler-" .. pipe_level, 2},
                 {"underground-pipe-segment-" .. pipe_level, 10}
             },
             enabled = false,
@@ -98,7 +118,7 @@ function pipe_recipe(pipe_level, ingredient_pipe)
             type = "recipe",
             name = "underground-L-" .. pipe_level .. "-pipe",
             ingredients = {
-                {"pipe-coupler" .. pipe_level, 2},
+                {"pipe-coupler-" .. pipe_level, 2},
                 {"underground-pipe-segment-" .. pipe_level
                 
                 , 10}
@@ -110,7 +130,7 @@ function pipe_recipe(pipe_level, ingredient_pipe)
             type = "recipe",
             name = "underground-t-" .. pipe_level .. "-pipe",
             ingredients = {
-                {"pipe-coupler" .. pipe_level, 3},
+                {"pipe-coupler-" .. pipe_level, 3},
                 {"underground-pipe-segment-" .. pipe_level, 15}
             },
             enabled = false,
@@ -120,7 +140,7 @@ function pipe_recipe(pipe_level, ingredient_pipe)
             type = "recipe",
             name = "underground-cross-" .. pipe_level .. "-pipe",
             ingredients = {
-                {"pipe-coupler" .. pipe_level, 4},
+                {"pipe-coupler-" .. pipe_level, 4},
                 {"underground-pipe-segment-" .. pipe_level, 20}
             },
             enabled = false,
@@ -164,5 +184,5 @@ function pipe_recipe(pipe_level, ingredient_pipe)
 end
 
 pipe_recipe("t1", "pipe")
-pipe_recipe("t2", "pipe")
-pipe_recipe("t3", "pipe")
+pipe_recipe("t2", "pipe", "t1")
+pipe_recipe("t3", "pipe", "t2")
