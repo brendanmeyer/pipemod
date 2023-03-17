@@ -48,39 +48,10 @@ function pipe_recipe(pipe_level, ingredient_pipe, previous_level)
         pipe_recipe_helper(pipe_level, "underground-cross", ingredient_pipe, 0, 0, 4, 20),
         -- Couplers
         pipe_recipe_helper(pipe_level, "pipe-coupler", ingredient_pipe, 2, 0, 0, 0, 0, previous_level, 1, false),
-        -- {
-        --     type = "recipe",
-        --     name = "pipe-coupler-" .. pipe_level,
-        --     ingredients =
-        --     {
-        --         {ingredient_pipe, 2},
-        --     },
-        --     enabled = false,
-        --     result = "pipe-coupler-" .. pipe_level
-        -- },
         --Swivel Joint
-        {
-            type = "recipe",
-            name = "swivel-joint-" .. pipe_level,
-            ingredients =
-            {
-                {ingredient_pipe, 2},
-                {"iron-gear-wheel", 2},
-            },
-            enabled = false,
-            result = "swivel-joint-" .. pipe_level
-        },
+        pipe_recipe_helper(pipe_level, "swivel-joint", ingredient_pipe, 2, 0, 0, 0, 2, nil, 0, false),
         -- Segments
-        {
-            type = "recipe",
-            name = "underground-pipe-segment-" .. pipe_level,
-            ingredients =
-            {
-                {ingredient_pipe, 2},
-            },
-            enabled = false,
-            result = "underground-pipe-segment-" .. pipe_level
-        },
+        pipe_recipe_helper(pipe_level, "underground-pipe-segment", ingredient_pipe, 2, 0, 0, 0, 0, previous_level, 1, false),
     })
 end
 
