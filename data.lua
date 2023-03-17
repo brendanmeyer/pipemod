@@ -19,16 +19,25 @@ afh_ground_only =
 }
 
 
-levelsTable = {
-  ["t1"] = {1, Color.from_rgb(255,191,0,255/2)},
-  ["t2"] = {2, Color.from_rgb(227,38,45,255/2)},
-  ["t3"] = {3, Color.from_rgb(38,173,227,255/2)},
-  --["t4"] = {4, Color.from_rgb(75,0,130,255)},
-  --["t5"] = {5, Color.from_rgb(5,73,53,255)},
-}
+levelsTable = {}
+--   ["t1"] = {1, Color.from_rgb(255,191,0,255/2)},
+--   ["t2"] = {2, Color.from_rgb(227,38,45,255/2)},
+--   ["t3"] = {3, Color.from_rgb(38,173,227,255/2)},
+--   --["t4"] = {4, Color.from_rgb(75,0,130,255)},
+--   --["t5"] = {5, Color.from_rgb(5,73,53,255)},
+-- }
 
 if _G.mods["space-exploration"] then
-  levelsTable["space"] = {4, Color.from_rgb(255,255,255,255/2)}
+  levelsTable = {
+    ["t1"] = {1, Color.from_rgb(255,191,0,255/2)},
+    ["t2"] = {2, Color.from_rgb(227,38,45,255/2)},
+    ["t3"] = {3, Color.from_rgb(38,173,227,255/2)},
+    ["space"] = {4, Color.from_rgb(255,255,255,255/2)}
+  }
+elseif _G.mods["boblogistics"] then
+  levelsTable["stone"] = {1, Color.from_rgb(255,255,255,255/2)}
+  levelsTable["t1"] = {1, Color.from_rgb(255,255,255,255/2)}
+else
 end
 
 require("prototypes.entities.pipecovers")
@@ -85,6 +94,12 @@ if _G.mods["space-exploration"] then
   --[[
     Entities are generated as part of a script and perform a check at that stage.
   ]]
+elseif _G.mods["boblogistics"] then
+  pipe_recipe("stone", "stone-pipe")
+  pipe_recipe("t1", "pipe")
+  add_technology("stone", {'advanced-underground-piping'}, {count = 50, ingredients = {{'automation-science-pack', 1}}, time = 30})
+  add_technology("t1", {'advanced-underground-piping-t1'}, {count = 50, ingredients = {{'automation-science-pack', 1}}, time = 30})
+
 else
   -- Base Game
   pipe_recipe("t1", "pipe")
