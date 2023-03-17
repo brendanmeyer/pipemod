@@ -193,7 +193,7 @@ for name, properties in pairs(names_table) do
             current_pipe.se_allow_in_space = true
         else
             current_pipe.collision_mask = afh_ground_only
-            current_pipe.icon = "__underground-pipe-pack__/graphics/icons/" .. name .. "-t" .. level .. ".png"
+            current_pipe.icon = "__underground-pipe-pack__/graphics/icons/level-t" .. level .. "/" .. name .. ".png"
             current_pipe.se_allow_in_space = false
         end
 

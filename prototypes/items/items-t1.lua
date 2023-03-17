@@ -1,114 +1,42 @@
 
+function pipe_item_helper(pipe_level, name, subgroup, order, stack_size, ispipe)
+    pipestr = ""
+    if ispipe then pipestr = "-pipe" end
+
+    return {
+        type = "item",
+        name = name.."-"..pipe_level..pipestr,
+        icon = "__underground-pipe-pack__/graphics/icons/level-t"..pipe_level.."/"..name..".png",
+        icon_size = 32,
+        flags = nil,
+        subgroup = subgroup,
+        order = order,
+        place_result = name.."-"..pipe_level..pipestr,
+        stack_size = stack_size
+    }
+end
+
 function pipe_item(pipe_level)
     data:extend({
         -- ONE TO ONE PIPES
-        {
-            type = "item",
-            name = "one-to-one-forward-"..pipe_level.."-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/one-to-one-"..pipe_level..".png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "pipes-to-ground",
-            order = "c-a",
-            place_result = "one-to-one-forward-"..pipe_level.."-pipe",
-            stack_size = 50
-        },
+        pipe_item_helper(pipe_level, "one-to-one-forward", "pipes-to-ground", "c-a", 50),
         -- ONE TO TWO PIPES
-        {
-            type = "item",
-            name = "one-to-two-perpendicular-"..pipe_level.."-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/one-to-two-parallel-"..pipe_level..".png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "pipes-to-ground",
-            order = "c-b",
-            place_result = "one-to-two-perpendicular-"..pipe_level.."-pipe",
-            stack_size = 50
-        },
-        --[[{
-            type = "item",
-            name = "one-to-two-L-FL-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/one-to-two-L-t1.png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "pipes-to-ground",
-            order = "c-c",
-            place_result = "one-to-two-L-FL-pipe",
-            stack_size = 50
-        },]]--
+        pipe_item_helper(pipe_level, "one-to-two-perpendicular", "pipes-to-ground", "c-b", 50),
+        -- pipe_item_helper(pipe_level, "one-to-two-L-FL", "pipes-to-ground", "c-c", 50),
         -- ONE TO THREE PIPES
-        {
-            type = "item",
-            name = "one-to-three-forward-"..pipe_level.."-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/one-to-three-"..pipe_level..".png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "pipes-to-ground",
-            order = "c-d",
-            place_result = "one-to-three-forward-"..pipe_level.."-pipe",
-            stack_size = 50
-        },
+        pipe_item_helper(pipe_level, "one-to-three-forward", "pipes-to-ground", "c-d", 50),
         -- ONE TO FOUR PIPES
-        {
-            type = "item",
-            name = "one-to-four-"..pipe_level.."-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/one-to-four-"..pipe_level..".png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "pipes-to-ground",
-            order = "c-e",
-            place_result = "one-to-four-"..pipe_level.."-pipe",
-            stack_size = 50
-        },
+        pipe_item_helper(pipe_level, "one-to-four-forward", "pipes-to-ground", "c-e", 50),
         -- UNDERGROUND I PIPES
-        {
-            type = "item",
-            name = "underground-i-"..pipe_level.."-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/underground-i-"..pipe_level..".png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "underground-pipes",
-            order = "d-a",
-            place_result = "underground-i-"..pipe_level.."-pipe",
-            stack_size = 50
-        },
+        pipe_item_helper(pipe_level, "underground-i", "underground-pipes", "d-a", 50),
         -- UNDERGROUND L PIPES
-        {
-            type = "item",
-            name = "underground-L-"..pipe_level.."-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/underground-L-"..pipe_level..".png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "underground-pipes",
-            order = "d-b",
-            place_result = "underground-L-"..pipe_level.."-pipe",
-            stack_size = 50
-        },
+        pipe_item_helper(pipe_level, "underground-L", "underground-pipes", "d-b", 50),
         -- UNDERGROUND T PIPES
-        {
-            type = "item",
-            name = "underground-t-"..pipe_level.."-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/underground-t-"..pipe_level..".png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "underground-pipes",
-            order = "d-c",
-            place_result = "underground-t-"..pipe_level.."-pipe",
-            stack_size = 50
-        },
+        pipe_item_helper(pipe_level, "underground-t", "underground-pipes", "d-c", 50),
         -- UNDERGROUND CROSS PIPE
-        {
-            type = "item",
-            name = "underground-cross-"..pipe_level.."-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/underground-cross-"..pipe_level..".png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "underground-pipes",
-            order = "d-d",
-            place_result = "underground-cross-"..pipe_level.."-pipe",
-            stack_size = 50
-        },
+        pipe_item_helper(pipe_level, "underground-cross", "underground-pipes", "d-d", 50),
         -- UNDERGROUND BUILDINGS
+        -- pipe_item_helper(nil, "underground-mini-pump", "underground-buildings", "a-a", 50),
         {
             type = "item",
             name = "underground-mini-pump",
@@ -121,18 +49,9 @@ function pipe_item(pipe_level)
             stack_size = 50
         },
         -- FOUR TO FOUR PIPE
-        {
-            type = "item",
-            name = "4-to-4-"..pipe_level.."-pipe",
-            icon = "__underground-pipe-pack__/graphics/icons/four-to-four-"..pipe_level..".png",
-            icon_size = 32,
-            flags = nil,
-            subgroup = "multi-pipes",
-            order = "b-d",
-            place_result = "4-to-4-"..pipe_level.."-pipe",
-            stack_size = 50
-        },
+        pipe_item_helper(pipe_level, "four-to-four", "multi-pipes", "b-d", 50),
         -- INTERMEDIARY
+        pipe_item_helper(pipe_level, "one-to-three-forward", "pipes-to-ground", "c-d", 50),
         {
             type = "item",
             name = "swivel-joint-"..pipe_level,
@@ -143,6 +62,7 @@ function pipe_item(pipe_level)
             order = "a-a",
             stack_size = 100
           },
+          pipe_item_helper(pipe_level, "one-to-three-forward", "pipes-to-ground", "c-d", 50),
           {
             type = "item",
             name = "pipe-coupler-"..pipe_level,
@@ -154,6 +74,7 @@ function pipe_item(pipe_level)
             stack_size = 100
           },
           -- UNDERGROUND PIPE SEGMENTS
+        pipe_item_helper(pipe_level, "one-to-three-forward", "pipes-to-ground", "c-d", 50),
           {
             type = "item",
             name = "underground-pipe-segment-"..pipe_level,
