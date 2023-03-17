@@ -81,7 +81,7 @@ local namesTable = {
   },
   ["one-to-three"] = {
     {
-      icon = "one-to-three",
+      icon = "one-to-three-forward",
       mine_and_place = "-forward",
       variant = {
       ["-forward-"] = "SEW",
@@ -94,7 +94,7 @@ local namesTable = {
   ["one-to-four"] = {
     {
       icon = "one-to-four-forward",
-      mine_and_place = "",
+      mine_and_place = "-forward",
       variant = {
         ["-forward-"] = "NSEW"
       }

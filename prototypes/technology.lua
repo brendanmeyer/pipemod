@@ -33,7 +33,7 @@ function add_technology(pipe_level, prerequisites, unit)
             -- ONE TO THREE PIPES
             'one-to-three-forward-'..pipe_level..'-pipe',
             -- ONE TO FOUR PIPE
-            'one-to-four-'..pipe_level..'-pipe',
+            'one-to-four-forward-'..pipe_level..'-pipe',
             -- UNDERGROUND I PIPES
             'underground-i-'..pipe_level..'-pipe',
             -- UNDERGROUND L PIPES
@@ -45,7 +45,7 @@ function add_technology(pipe_level, prerequisites, unit)
             -- UNDERGROUND BUILDINGS
             'underground-mini-pump',
             -- MULTI PIPES
-            '4-to-4-'..pipe_level..'-pipe',
+            'four-to-four-'..pipe_level..'-pipe',
             -- INTERMEDIARY MATERIALS
             'swivel-joint-'..pipe_level,
             'pipe-coupler-'..pipe_level,
@@ -88,7 +88,7 @@ data:extend(
                     recipe = 'one-to-three-forward-t2-pipe'
                 },
                 -- ONE TO FOUR PIPE
-                {type = 'unlock-recipe', recipe = 'one-to-four-t2-pipe'},
+                {type = 'unlock-recipe', recipe = 'one-to-four-forward-t2-pipe'},
                 -- UNDERGROUND I PIPES
                 {type = 'unlock-recipe', recipe = 'underground-i-t2-pipe'},
                 -- UNDERGROUND L PIPES
@@ -135,7 +135,7 @@ data:extend(
                     recipe = 'one-to-three-forward-t3-pipe'
                 },
                 -- ONE TO FOUR PIPE
-                {type = 'unlock-recipe', recipe = 'one-to-four-t3-pipe'},
+                {type = 'unlock-recipe', recipe = 'one-to-four-forward-t3-pipe'},
                 -- UNDERGROUND I PIPES
                 {type = 'unlock-recipe', recipe = 'underground-i-t3-pipe'},
                 -- UNDERGROUND L PIPES

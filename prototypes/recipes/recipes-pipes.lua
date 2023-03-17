@@ -59,19 +59,19 @@ function pipe_recipe(pipe_level, ingredient_pipe)
         -- ONE TO FOUR PIPE
         {
             type = "recipe",
-            name = "one-to-four-" .. pipe_level .. "-pipe",
+            name = "one-to-four-forward-" .. pipe_level .. "-pipe",
             ingredients = {
                 {ingredient_pipe, 1},
                 {"pipe-coupler" .. pipe_level, 4},
                 {"underground-pipe-segment-" .. pipe_level, 20}
             },
             enabled = false,
-            result = "one-to-four-" .. pipe_level .. "-pipe"
+            result = "one-to-four-forward-" .. pipe_level .. "-pipe"
         },
         -- MULTI PIPES
         {
             type = "recipe",
-            name = "4-to-4-" .. pipe_level .. "-pipe",
+            name = "four-to-four-" .. pipe_level .. "-pipe",
             ingredients =
             {
                 {ingredient_pipe, 1},
@@ -79,7 +79,7 @@ function pipe_recipe(pipe_level, ingredient_pipe)
                 {"underground-pipe-segment-" .. pipe_level, 20},
             },
             enabled = false,
-            result = "4-to-4-" .. pipe_level .. "-pipe"
+            result = "four-to-four-" .. pipe_level .. "-pipe"
         },
 
         -- UNDERGROUND I PIPES

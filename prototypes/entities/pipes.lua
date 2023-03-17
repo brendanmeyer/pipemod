@@ -4,12 +4,12 @@ function pipe_entity(pipe_level)
     data:extend({
         {
             type = "pipe",
-            name = "4-to-4-"..pipe_level.."-pipe",
+            name = "four-to-four-"..pipe_level.."-pipe",
             clamped = true,
             icon = "__underground-pipe-pack__/graphics/icons/level-"..pipe_level.."/four-to-four.png",
             icon_size = 32,
             flags = {"placeable-neutral", "player-creation"},
-            minable = {hardness = 0.2, mining_time = 0.5, result = "4-to-4-"..pipe_level.."-pipe"},
+            minable = {hardness = 0.2, mining_time = 0.5, result = "four-to-four-"..pipe_level.."-pipe"},
             max_health = 100,
             corpse = "small-remnants",
             se_allow_in_space = false,

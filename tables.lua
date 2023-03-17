@@ -253,7 +253,7 @@ data.pipetable = {
     ['one-to-three-reverse-t1-pipe'] = 4,
     ['one-to-three-left-t1-pipe'] = 4,
     ['underground-t-t1-pipe'] = 3,
-    ['one-to-four-t1-pipe'] = 5,
+    ['one-to-four-forward-t1-pipe'] = 5,
     ['underground-cross-t1-pipe'] = 4,
     --T2 pipes
     ['one-to-two-parallel-t2-pipe'] = 3,
@@ -269,7 +269,7 @@ data.pipetable = {
     ['one-to-three-reverse-t2-pipe'] = 4,
     ['one-to-three-left-t2-pipe'] = 4,
     ['underground-t-t2-pipe'] = 3,
-    ['one-to-four-t2-pipe'] = 5,
+    ['one-to-four-forward-t2-pipe'] = 5,
     ['underground-cross-t2-pipe'] = 4,
     --T3 pipes
     ['one-to-two-parallel-t3-pipe'] = 3,
@@ -285,7 +285,7 @@ data.pipetable = {
     ['one-to-three-reverse-t3-pipe'] = 4,
     ['one-to-three-left-t3-pipe'] = 4,
     ['underground-t-t3-pipe'] = 3,
-    ['one-to-four-t3-pipe'] = 5,
+    ['one-to-four-forward-t3-pipe'] = 5,
     ['underground-cross-t3-pipe'] = 4,
     --SPACE PIPES
     ['one-to-two-parallel-space-pipe'] = 3,
@@ -519,6 +519,6 @@ data.adjustable_valve_table = {
 }
 
 data.ignore = {
-    ['4-to-4-t1-pipe'] = '4-to-4-t1-pipe'
+    ['four-to-four-forward-t1-pipe'] = 'four-to-four-forward-t1-pipe'
 }
 return data
