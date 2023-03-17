@@ -68,18 +68,6 @@ local names_table = {
     },
 }
 
--- local levels_table = {
---     [1] = Color.from_rgb(255,191,0,255/2),
---     [2] = Color.from_rgb(227,38,45,255/2),
---     [3] = Color.from_rgb(38,173,227,255/2),
---     --[4] = Color.from_rgb(75,0,130,255),
---     --[5] = Color.from_rgb(5,73,53,255)
--- }
-
--- -- if mods["space-exploration"] then
---     levels_table["space"] = Color.from_rgb(255,255,255,255/2)
--- -- end
-
 local file_path = "__underground-pipe-pack__/graphics/entity/underground-cap/"
 local a_file_path = "__underground-pipe-pack__/graphics/entity/arrows/"
 
@@ -177,27 +165,18 @@ for name, properties in pairs(names_table) do
         level = ltdata[1]
         color = ltdata[2]
         local current_pipe = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
-        -- if level == 1 then
-        --     current_pipe.name = name .. "-pipe"
-        --     current_pipe.minable.result = name .. "-pipe"
-        -- -- else
-        -- if level == "space" then
-        --     current_pipe.name = name .. "-space-pipe"
-        --     current_pipe.minable.result = name .. "-space-pipe"
-        -- else
-            current_pipe.name = name.."-"..levelname.."-pipe"
-            current_pipe.minable.result = name.."-"..levelname.."-pipe"
-        -- end
-
-        -- if level == "space" then
-        --     current_pipe.collision_mask = afh_space_only
-        --     current_pipe.icon = "__underground-pipe-pack__/graphics/icons/space-exploration-compat/" .. name .. ".png"
-        --     current_pipe.se_allow_in_space = true
-        -- else
+        
+        current_pipe.name = name.."-"..levelname.."-pipe"
+        current_pipe.minable.result = name.."-"..levelname.."-pipe"
+        
+        if level == "space" then
+            current_pipe.collision_mask = afh_space_only
+        else
             current_pipe.collision_mask = afh_ground_only
-            current_pipe.icon = "__underground-pipe-pack__/graphics/icons/level-"..levelname.."/"..name..".png"
-            current_pipe.se_allow_in_space = false
-        -- end
+        end
+
+        current_pipe.icon = "__underground-pipe-pack__/graphics/icons/level-"..levelname.."/"..name..".png"
+        current_pipe.se_allow_in_space = false
 
         current_pipe.icon_size = 32
         current_pipe.selection_priority = 51

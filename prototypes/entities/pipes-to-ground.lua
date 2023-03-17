@@ -181,14 +181,9 @@ for types, sets in pairs(namesTable) do
         currentPipe.name = types .. variants .. levelsS .. "-pipe"
         currentPipe.minable.result = types .. datas.mine_and_place .. "-" .. levelsS .. "-pipe"
         currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-" .. levelsS .. "-pipe", count = 1}
-
-        -- if levelsS == "space" then
-        --   currentPipe.icon = "__underground-pipe-pack__/graphics/icons/space-exploration-compat/" .. datas.icon .. ".png"
-        --   currentPipe.se_allow_in_space = true
-        -- else
-          currentPipe.icon = "__underground-pipe-pack__/graphics/icons/level-" .. levelsS .. "/" .. datas.icon .. ".png"
-          currentPipe.se_allow_in_space = false
-        -- end
+        
+        currentPipe.icon = "__underground-pipe-pack__/graphics/icons/level-" .. levelsS .. "/" .. datas.icon .. ".png"
+        currentPipe.se_allow_in_space = false
 
         currentPipe.icon_size = 32
         local fluidBox = util.table.deepcopy(currentPipe.fluid_box)

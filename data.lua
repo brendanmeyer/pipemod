@@ -20,17 +20,6 @@ afh_ground_only =
 
 
 levelsTable = {
-  [1] = Color.from_rgb(255,191,0,255/2),
-  [2] = Color.from_rgb(227,38,45,255/2),
-  [3] = Color.from_rgb(38,173,227,255/2),
-  --[4] = Color.from_rgb(75,0,130,255),
-  --[5] = Color.from_rgb(5,73,53,255)
-}
-
--- if mods["space-exploration"] then
-  levelsTable["space"] = Color.from_rgb(255,255,255,255/2)
--- end
-levelsTable = {
   ["t1"] = {1, Color.from_rgb(255,191,0,255/2)},
   ["t2"] = {2, Color.from_rgb(227,38,45,255/2)},
   ["t3"] = {3, Color.from_rgb(38,173,227,255/2)},
@@ -38,8 +27,7 @@ levelsTable = {
   --["t5"] = {5, Color.from_rgb(5,73,53,255)},
 }
 
-levelsTable["space"] = {4, Color.from_rgb(255,255,255,255/2)}
-if mods["space-exploration"] then
+if _G.mods["space-exploration"] then
   levelsTable["space"] = {4, Color.from_rgb(255,255,255,255/2)}
 end
 
@@ -58,6 +46,11 @@ require("prototypes.recipes.recipes-valves")
 require("prototypes.technology")
 require("prototypes.controls")
 if _G.mods["space-exploration"] then
+  -- GROUPS
+  require("prototypes.space-exploration-compat.groups-space")
+
+  -- ENTITIES
+  require("prototypes.space-exploration-compat.entities-space")
 
   -- RECIPES
   pipe_recipe("t1", "pipe")
@@ -66,14 +59,28 @@ if _G.mods["space-exploration"] then
   
   pipe_recipe("space", "se-space-pipe")
 
-  -- require("prototypes.recipes.space-exploration-compat.recipes-space-pipes")
-  -- require("prototypes.recipes.space-exploration-compat.recipes-space-valves")
+  -- RECIPES Modifications
+  require("prototypes.space-exploration-compat.recipes-space-pipes")
+
+  -- require("prototypes.space-exploration-compat.recipes-space-pipes")
+  -- require("prototypes.space-exploration-compat.recipes-space-valves")
 
   -- ITEMS
 
-  -- require("prototypes.items.space-exploration-compat.items-space-intermediary")
-  -- require("prototypes.items.space-exploration-compat.items-space-valves")
-  -- require("prototypes.items.space-exploration-compat.items-space-pipes")
+  -- require("prototypes.space-exploration-compat.items-space-intermediary")
+  -- require("prototypes.space-exploration-compat.items-space-valves")
+  -- require("prototypes.space-exploration-compat.items-space-pipes")
+
+  -- TECHNOLOGY
+  add_technology("t1", {'advanced-underground-piping'}, {count = 50, ingredients = {{'automation-science-pack', 1}}, time = 30})
+  add_technology("t2", {'advanced-underground-piping-t1'}, {count = 100, ingredients = {{'automation-science-pack', 1}, {'logistic-science-pack', 1}}, time = 30})
+  add_technology("t3", {'advanced-underground-piping-t2'}, {count = 200, ingredients = {{'automation-science-pack', 1}, {'logistic-science-pack', 1}, {'chemical-science-pack', 1}}, time = 30})
+
+  add_technology(
+    "space", 
+    {'advanced-underground-piping-t3', 'se-heavy-girder'}, 
+    {count = 200, ingredients = {{'automation-science-pack', 1}, {'logistic-science-pack', 1}, {'chemical-science-pack', 1}, {'se-rocket-science-pack', 1}, {'se-material-science-pack-1', 1}}, time = 30}
+  )
 
   --[[
     Entities are generated as part of a script and perform a check at that stage.
@@ -83,6 +90,8 @@ else
   pipe_recipe("t1", "pipe")
   pipe_recipe("t2", "pipe", "t1")
   pipe_recipe("t3", "pipe", "t2")
-  
-  pipe_recipe("space", "pipe")
+
+  add_technology("t1", {'advanced-underground-piping'}, {count = 50, ingredients = {{'automation-science-pack', 1}}, time = 30})
+  add_technology("t2", {'advanced-underground-piping-t1'}, {count = 100, ingredients = {{'automation-science-pack', 1}, {'logistic-science-pack', 1}}, time = 30})
+  add_technology("t3", {'advanced-underground-piping-t2'}, {count = 200, ingredients = {{'automation-science-pack', 1}, {'logistic-science-pack', 1}, {'chemical-science-pack', 1}}, time = 30})
 end
