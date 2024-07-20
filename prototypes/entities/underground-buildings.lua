@@ -7,7 +7,7 @@ data:extend(
         {
             type = 'pump',
             name = 'underground-mini-pump',
-            icon = '__underground-pipe-pack__/graphics/icons/underground-mini-pump.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/underground-mini-pump.png',
             icon_size = 32,
             flags = {'placeable-neutral', 'player-creation'},
             minable = {mining_time = 1, result = 'underground-mini-pump'},
@@ -70,7 +70,7 @@ data:extend(
                 north = {
                     layers = {
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/minipump/lr-minipump-north.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/minipump/lr-minipump-north.png',
                             width = 48,
                             height = 48,
                             line_length = 8,
@@ -78,7 +78,7 @@ data:extend(
                             animation_speed = 1.0,
                             shift = {0, 0.1875},
                             hr_version = {
-                                filename = '__underground-pipe-pack__/graphics/entity/minipump/hr-minipump-north.png',
+                                filename = '__BBunderground-pipe-pack__/graphics/entity/minipump/hr-minipump-north.png',
                                 width = 96,
                                 height = 96,
                                 scale = 0.5,
@@ -89,7 +89,7 @@ data:extend(
                             }
                         },
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/arrows/hr-ug-arrow-N.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/arrows/hr-ug-arrow-N.png',
                             priority = 'extra-high',
                             width = 96,
                             height = 96,
@@ -100,7 +100,7 @@ data:extend(
                             scale = 0.5
                         },
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png',
                             priority = 'high',
                             width = 48,
                             height = 48,
@@ -108,7 +108,7 @@ data:extend(
                             draw_as_shadow = true,
                             repeat_count = 64,
                             hr_version = {
-                                filename = '__underground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png',
+                                filename = '__BBunderground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png',
                                 priority = 'high',
                                 width = 96,
                                 height = 96,
@@ -123,7 +123,7 @@ data:extend(
                 east = {
                     layers = {
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/minipump/lr-minipump-east.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/minipump/lr-minipump-east.png',
                             width = 48,
                             height = 48,
                             line_length = 8,
@@ -131,7 +131,7 @@ data:extend(
                             animation_speed = 1.0,
                             shift = {0, 0.1875},
                             hr_version = {
-                                filename = '__underground-pipe-pack__/graphics/entity/minipump/hr-minipump-east.png',
+                                filename = '__BBunderground-pipe-pack__/graphics/entity/minipump/hr-minipump-east.png',
                                 width = 96,
                                 height = 96,
                                 scale = 0.5,
@@ -142,7 +142,7 @@ data:extend(
                             }
                         },
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/arrows/hr-ug-arrow-E.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/arrows/hr-ug-arrow-E.png',
                             priority = 'extra-high',
                             width = 96,
                             height = 96,
@@ -153,7 +153,7 @@ data:extend(
                             scale = 0.5
                         },
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png',
                             priority = 'high',
                             width = 48,
                             height = 48,
@@ -161,7 +161,7 @@ data:extend(
                             draw_as_shadow = true,
                             repeat_count = 64,
                             hr_version = {
-                                filename = '__underground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png',
+                                filename = '__BBunderground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png',
                                 priority = 'high',
                                 width = 96,
                                 height = 96,
@@ -176,7 +176,7 @@ data:extend(
                 south = {
                     layers = {
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/minipump/lr-minipump-south.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/minipump/lr-minipump-south.png',
                             width = 48,
                             height = 48,
                             line_length = 8,
@@ -184,7 +184,7 @@ data:extend(
                             animation_speed = 1.0,
                             shift = {0, 0.1875},
                             hr_version = {
-                                filename = '__underground-pipe-pack__/graphics/entity/minipump/hr-minipump-south.png',
+                                filename = '__BBunderground-pipe-pack__/graphics/entity/minipump/hr-minipump-south.png',
                                 width = 96,
                                 height = 96,
                                 scale = 0.5,
@@ -195,7 +195,7 @@ data:extend(
                             }
                         },
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/arrows/hr-ug-arrow-S.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/arrows/hr-ug-arrow-S.png',
                             priority = 'extra-high',
                             width = 96,
                             height = 96,
@@ -206,7 +206,7 @@ data:extend(
                             scale = 0.5
                         },
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png',
                             priority = 'high',
                             width = 48,
                             height = 48,
@@ -214,7 +214,7 @@ data:extend(
                             draw_as_shadow = true,
                             repeat_count = 64,
                             hr_version = {
-                                filename = '__underground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png',
+                                filename = '__BBunderground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png',
                                 priority = 'high',
                                 width = 96,
                                 height = 96,
@@ -229,7 +229,7 @@ data:extend(
                 west = {
                     layers = {
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/minipump/lr-minipump-west.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/minipump/lr-minipump-west.png',
                             width = 48,
                             height = 48,
                             line_length = 8,
@@ -237,7 +237,7 @@ data:extend(
                             animation_speed = 1.0,
                             shift = {0, 0.1875},
                             hr_version = {
-                                filename = '__underground-pipe-pack__/graphics/entity/minipump/hr-minipump-west.png',
+                                filename = '__BBunderground-pipe-pack__/graphics/entity/minipump/hr-minipump-west.png',
                                 width = 96,
                                 height = 96,
                                 scale = 0.5,
@@ -248,7 +248,7 @@ data:extend(
                             }
                         },
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/arrows/hr-ug-arrow-W.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/arrows/hr-ug-arrow-W.png',
                             priority = 'extra-high',
                             width = 96,
                             height = 96,
@@ -259,7 +259,7 @@ data:extend(
                             scale = 0.5
                         },
                         {
-                            filename = '__underground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png',
+                            filename = '__BBunderground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png',
                             priority = 'high',
                             width = 48,
                             height = 48,
@@ -267,7 +267,7 @@ data:extend(
                             draw_as_shadow = true,
                             repeat_count = 64,
                             hr_version = {
-                                filename = '__underground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png',
+                                filename = '__BBunderground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png',
                                 priority = 'high',
                                 width = 96,
                                 height = 96,

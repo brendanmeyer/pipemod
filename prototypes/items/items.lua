@@ -6,7 +6,7 @@ function pipe_item_helper(pipe_level, name, subgroup, order, stack_size, ispipe,
     item = {
         type = "item",
         name = name.."-"..pipe_level..pipestr,
-        icon = "__underground-pipe-pack__/graphics/icons/level-"..pipe_level.."/"..name..".png",
+        icon = "__BBunderground-pipe-pack__/graphics/icons/level-"..pipe_level.."/"..name..".png",
         icon_size = 32,
         flags = nil,
         subgroup = subgroup,

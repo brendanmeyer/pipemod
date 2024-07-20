@@ -102,7 +102,7 @@ local namesTable = {
   }
 }
 
-local file_path = "__underground-pipe-pack__/graphics/entity/level-"
+local file_path = "__BBunderground-pipe-pack__/graphics/entity/level-"
 local function build_picture_table(type, variant, level)
   if variant == "-perpendicular-secondary-" then
     variant = "-perpendicular-"
@@ -182,7 +182,7 @@ for types, sets in pairs(namesTable) do
         currentPipe.minable.result = types .. datas.mine_and_place .. "-" .. levelsS .. "-pipe"
         currentPipe.placeable_by = {item = types .. datas.mine_and_place .. "-" .. levelsS .. "-pipe", count = 1}
         
-        currentPipe.icon = "__underground-pipe-pack__/graphics/icons/level-" .. levelsS .. "/" .. datas.icon .. ".png"
+        currentPipe.icon = "__BBunderground-pipe-pack__/graphics/icons/level-" .. levelsS .. "/" .. datas.icon .. ".png"
         currentPipe.se_allow_in_space = false
 
         currentPipe.icon_size = 32

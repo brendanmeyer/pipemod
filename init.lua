@@ -12,10 +12,10 @@ local versionsTable = {
 function init.mod_init(modData)
     global.correctTable = nil
     if modData
-        and modData.mod_changes["underground-pipe-pack"]
-        and modData.mod_changes["underground-pipe-pack"].old_version
+        and modData.mod_changes["BBunderground-pipe-pack"]
+        and modData.mod_changes["BBunderground-pipe-pack"].old_version
     then
-        if versionsTable[modData.mod_changes["underground-pipe-pack"].old_version] then
+        if versionsTable[modData.mod_changes["BBunderground-pipe-pack"].old_version] then
             game.print("Pipe clamp and highlight tool have been migrated to a new mod 'PickerPipeTools'")
             game.print("Download 'PickerPipeTools' from the mod portal to keep clamped pipes and more tools")
         end

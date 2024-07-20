@@ -108,7 +108,7 @@ local empty_sprite =
 local valves_to_add = {}
 
 local function build_valve_picture(valve)
-  local file_path = "__underground-pipe-pack__/graphics/entity/valves/"
+  local file_path = "__BBunderground-pipe-pack__/graphics/entity/valves/"
   local pictures = {
     picture = {
       north = {
@@ -205,7 +205,7 @@ return pictures
 
 end
 local function build_valve_picture_with_percent(percent, valve)
-  local file_path = "__underground-pipe-pack__/graphics/entity/valves/"
+  local file_path = "__BBunderground-pipe-pack__/graphics/entity/valves/"
   local pictures = {
     picture = {
       north = {

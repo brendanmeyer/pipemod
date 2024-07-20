@@ -1,5 +1,4 @@
-function add_technology_helper(
-    name, icon_path, prerequisites, unlock_effects, unit, order)
+function add_technology_helper(name, pipe_level, icon_path, prerequisites, unlock_effects, unit, order)
     local effects = {}
     for _, ue in pairs(unlock_effects) do
         effects[#effects + 1] = {type = 'unlock-recipe', recipe = ue}
@@ -15,7 +14,8 @@ function add_technology_helper(
                 prerequisites = prerequisites,
                 effects = effects,
                 unit = unit,
-                order = order
+                order = order,
+                localised_name = "Advanced Underground Piping ("..pipe_level..")"
             }
         })
 end
@@ -23,7 +23,8 @@ end
 function add_technology(pipe_level, prerequisites, unit)
     add_technology_helper(
         'advanced-underground-piping-'..pipe_level,
-        '__underground-pipe-pack__/graphics/technology/advanced-underground-piping-'..pipe_level..'.png',
+        pipe_level,
+        '__BBunderground-pipe-pack__/graphics/technology/advanced-underground-piping-'..pipe_level..'.png',
         {'fluid-handling'}, {
             -- ONE TO ONE PIPES
             'one-to-one-forward-'..pipe_level..'-pipe',

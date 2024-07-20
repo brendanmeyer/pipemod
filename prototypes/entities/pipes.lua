@@ -6,7 +6,7 @@ function pipe_entity(pipe_level)
             type = "pipe",
             name = "four-to-four-"..pipe_level.."-pipe",
             clamped = true,
-            icon = "__underground-pipe-pack__/graphics/icons/level-"..pipe_level.."/four-to-four.png",
+            icon = "__BBunderground-pipe-pack__/graphics/icons/level-"..pipe_level.."/four-to-four.png",
             icon_size = 32,
             flags = {"placeable-neutral", "player-creation"},
             minable = {hardness = 0.2, mining_time = 0.5, result = "four-to-four-"..pipe_level.."-pipe"},

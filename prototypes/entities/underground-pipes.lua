@@ -68,8 +68,8 @@ local names_table = {
     },
 }
 
-local file_path = "__underground-pipe-pack__/graphics/entity/underground-cap/"
-local a_file_path = "__underground-pipe-pack__/graphics/entity/arrows/"
+local file_path = "__BBunderground-pipe-pack__/graphics/entity/underground-cap/"
+local a_file_path = "__BBunderground-pipe-pack__/graphics/entity/arrows/"
 
 local function build_picture_table(variants, color)
     local picture_table = {}
@@ -136,7 +136,7 @@ local function build_picture_table(variants, color)
                     }
                 },
                 {
-                    filename = "__underground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png",
+                    filename = "__BBunderground-pipe-pack__/graphics/entity/shadows/lr-minipump-shadow.png",
                     priority = "high",
                     width = 48,
                     height = 48,
@@ -144,7 +144,7 @@ local function build_picture_table(variants, color)
                     draw_as_shadow = true,
                     hr_version =
                     {
-                        filename = "__underground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png",
+                        filename = "__BBunderground-pipe-pack__/graphics/entity/shadows/hr-minipump-shadow.png",
                         priority = "high",
                         width = 96,
                         height = 96,
@@ -175,7 +175,7 @@ for name, properties in pairs(names_table) do
             current_pipe.collision_mask = afh_ground_only
         end
 
-        current_pipe.icon = "__underground-pipe-pack__/graphics/icons/level-"..levelname.."/"..name..".png"
+        current_pipe.icon = "__BBunderground-pipe-pack__/graphics/icons/level-"..levelname.."/"..name..".png"
         current_pipe.se_allow_in_space = false
 
         current_pipe.icon_size = 32

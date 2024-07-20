@@ -4,7 +4,7 @@ data:extend(
         {
             type = 'item',
             name = 'one-to-one-forward-space-pipe',
-            icon = '__underground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-one.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-one.png',
             icon_size = 32,
             flags = nil,
             subgroup = 'pipes-to-ground-space',
@@ -16,7 +16,7 @@ data:extend(
         {
             type = 'item',
             name = 'one-to-two-perpendicular-space-pipe',
-            icon = '__underground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-two-parallel.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-two-parallel.png',
             icon_size = 32,
             flags = nil,
             subgroup = 'pipes-to-ground-space',
@@ -28,7 +28,7 @@ data:extend(
         --[[{
       type = "item",
       name = "one-to-two-L-FL-space-pipe",
-      icon = "__underground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-two-L.png",
+      icon = "__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-two-L.png",
       icon_size = 32,
       flags = nil,
       subgroup = "pipes-to-ground-space",
@@ -39,7 +39,7 @@ data:extend(
         {
             type = 'item',
             name = 'one-to-three-forward-space-pipe',
-            icon = '__underground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-three.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-three.png',
             icon_size = 32,
             flags = nil,
             subgroup = 'pipes-to-ground-space',
@@ -51,7 +51,7 @@ data:extend(
         {
             type = 'item',
             name = 'one-to-four-space-pipe',
-            icon = '__underground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-four.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/one-to-four.png',
             icon_size = 32,
             flags = nil,
             subgroup = 'pipes-to-ground-space',
@@ -63,7 +63,7 @@ data:extend(
         {
             type = 'item',
             name = 'underground-i-space-pipe',
-            icon = '__underground-pipe-pack__/graphics/icons/space-exploration-compat/underground-i.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/underground-i.png',
             icon_size = 32,
             flags = nil,
             subgroup = 'underground-pipes-space',
@@ -75,7 +75,7 @@ data:extend(
         {
             type = 'item',
             name = 'underground-L-space-pipe',
-            icon = '__underground-pipe-pack__/graphics/icons/space-exploration-compat/underground-L.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/underground-L.png',
             icon_size = 32,
             flags = nil,
             subgroup = 'underground-pipes-space',
@@ -87,7 +87,7 @@ data:extend(
         {
             type = 'item',
             name = 'underground-t-space-pipe',
-            icon = '__underground-pipe-pack__/graphics/icons/space-exploration-compat/underground-t.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/underground-t.png',
             icon_size = 32,
             flags = nil,
             subgroup = 'underground-pipes-space',
@@ -99,7 +99,7 @@ data:extend(
         {
             type = 'item',
             name = 'underground-cross-space-pipe',
-            icon = '__underground-pipe-pack__/graphics/icons/space-exploration-compat/underground-cross.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/underground-cross.png',
             icon_size = 32,
             flags = nil,
             subgroup = 'underground-pipes-space',
@@ -111,7 +111,7 @@ data:extend(
         {
             type = 'item',
             name = 'underground-space-pump',
-            icon = '__underground-pipe-pack__/graphics/icons/space-exploration-compat/underground-space-pump.png',
+            icon = '__BBunderground-pipe-pack__/graphics/icons/space-exploration-compat/underground-space-pump.png',
             icon_size = 32,
             flags = nil,
             subgroup = 'underground-buildings-space',
